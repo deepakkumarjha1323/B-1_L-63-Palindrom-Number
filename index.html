@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Js Palindrom Number</title>
+    </head>
+    <body>
+        
+
+        <script>
+            // 1. Function Defination
+            function checkPlindromNumber(n){
+                // alert(n)
+                let isPalindrom = true;
+                // For lop Statement
+                for(j=(n.length-1); j>=0; j--){
+                    console.log(n.charAt(j));
+                    // Nested For loop
+                    for(var i=0; i<n.length; i++){
+                        console.log(n.charAt(i));
+                        // Conditions Statement
+                        if(n.charAt(j) == n.charAt(i)){
+                            isPalindrom = true;
+                        }else{
+                            isPalindrom = false;
+                        }
+                    }
+                }
+
+                // conditions
+                if(isPalindrom == true){
+                    alert(n + ' is a Palindrom Number');
+                }else{
+                    alert(n + " is not a Palindrom Number");
+                }
+            }
+
+            // Confirm Box
+            let number= prompt('Plz enter the number to check if is palindrom or not?');
+            // convert the string to number
+            number = parseInt(number);
+
+            //2. function calling
+            checkPlindromNumber(number);
+        </script>
+    </body>
+</html>
